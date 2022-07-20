@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Day164BOJ1520내리막DFSSP { // 1520
+public class Day164BOJ1520내리막DFSDP { // 1520
 	static int N, M;
 	static int[][] map;
 	static Integer[][] dp;
