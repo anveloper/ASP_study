@@ -11,7 +11,6 @@ public class Day182BOJ1072승률이분탐색BESTSol { // 1072 승률 이분탐�
 			System.out.println((int) Math.ceil((double) (x * z - 100 * y) / (100 - z)));
 	}
 
-	//////////////////////////////////////////////////
 	static long readLong() throws Exception {
 		long n = 0;
 		boolean isNegative = false;
