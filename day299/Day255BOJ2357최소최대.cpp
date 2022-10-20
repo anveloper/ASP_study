@@ -8,10 +8,8 @@ int main() { // g
     ;
   vector<int> mx;
   vector<int> mn;
-
   mx.resize(k << 1);
   mn.resize(k << 1);
-
   for (i = k; i < n + k; i++) {
     scanf("%d", &mx[i]);
     mn[i] = mx[i];
