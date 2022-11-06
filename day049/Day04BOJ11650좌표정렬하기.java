@@ -1,4 +1,4 @@
-package com.ssafy.an.day049;
+package ASP_study.day049;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
