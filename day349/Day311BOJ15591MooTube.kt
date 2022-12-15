@@ -8,23 +8,10 @@ var Q = 0
 var edges = arrayOf<ArrayList<Pair<Int, Int>>>()
 
 var ans = 0
-var k = 0
+var K = 0
 var visited = booleanArrayOf()
 
-fun dfs(x: Int, usado: Int){
-    if(usado < k)
-        return
-    visited[x] = true
-    ans++
-    edges[x].forEach{
-        val next = it.first
-        val edge = it.second
-        if(!visited[next]){
-            dfs(next, min(usado, edge))
-        } 
-    }
-}
-
+// Day311BOJ15591MooTube
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))){
     var st = StringTokenizer(readLine())
     N = st.nextToken().toInt()
@@ -43,7 +30,7 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))){
     var sb = StringBuilder()
     repeat(Q){
         st = StringTokenizer(readLine())
-        k = st.nextToken().toInt()
+        K = st.nextToken().toInt()
         val v = st.nextToken().toInt()
         ans = 0
         visited.fill(false)
@@ -54,4 +41,19 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))){
     }
     print(sb.toString())
 }
+
+fun dfs(v: Int, k: Int){
+    if(k < K)
+        return
+    visited[v] = true
+    ans++
+    edges[v].forEach{
+        val n = it.first
+        val c = it.second
+        if(!visited[n]){
+            dfs(n, min(k, c))
+        }
+    }
+}
+
 
