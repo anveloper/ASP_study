@@ -3,13 +3,13 @@ import java.io.InputStreamReader
 import java.util.*
 import kotlin.math.min
 
-var N = 0
-var Q = 0
-var edges = arrayOf<ArrayList<Pair<Int, Int>>>()
+private var N = 0
+private var Q = 0
+private var edges = arrayOf<ArrayList<Pair<Int, Int>>>()
 
-var ans = 0
-var K = 0
-var visited = booleanArrayOf()
+private var ans = 0
+private var K = 0
+private var visited = booleanArrayOf()
 
 // Day311BOJ15591MooTube
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))){
