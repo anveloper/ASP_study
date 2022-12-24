@@ -27,10 +27,10 @@ public class Day320BOJ4913페르마의크리스마스정리 {
             x = 0;
             y = 0;
 
-            // from 종현ㅇㄴㄴㅇ
+            // from 종현
             int tempL = L < 0 ? 0 : L;
             int tempU = U < 0 ? 0 : U;
-            
+
             // 25%, 시간초과 더러운 문제..
             // for (int i = Math.max(0, L); i <= Math.max(0, U); i++) {
             for (int i = tempL; i <= tempU; i++) {
