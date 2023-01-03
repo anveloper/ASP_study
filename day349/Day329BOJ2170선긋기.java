@@ -6,6 +6,15 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Day329BOJ2170선긋기 {
+    static class Node {
+        int l;
+        int r;
+
+        Node(int h, int o) {
+            l = Integer.min(h, o);
+            r = h + o - l;
+        }
+    }
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader((new InputStreamReader(System.in)));
         int N = Integer.parseInt(br.readLine());
@@ -29,12 +38,3 @@ public class Day329BOJ2170선긋기 {
     }
 }
 
-class Node {
-    int l;
-    int r;
-
-    Node(int h, int o) {
-        l = Integer.min(h, o);
-        r = h + o - l;
-    }
-}
