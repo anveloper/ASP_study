@@ -21,18 +21,13 @@ fun main() = StreamTokenizer(System.`in`.bufferedReader()).run {
         val c = input().toLong()
         if (dp[s][e] > c) dp[s][e] = c
     }
-
-    var check = false
-    while (true) {
-        if (check) break
-        check = true
-        for (i in 1..N) for (j in 1..N) for (k in 1..N) {
-            if (dp[i][k] != INF && dp[k][j] != INF) if (dp[i][j] > dp[i][k] + dp[k][j]) {
-                dp[i][j] = dp[i][k] + dp[k][j]
-                check = false
-            }
+    // 경유지 노드 k를 기준으로
+    for (k in 1..N) for (i in 1..N) for (j in 1..N) {
+        if (dp[i][k] != INF && dp[k][j] != INF) if (dp[i][j] > dp[i][k] + dp[k][j]) {
+            dp[i][j] = dp[i][k] + dp[k][j]
         }
     }
+
     val sb = StringBuilder()
     for (i in 1..N) {
         for (j in 1 until N) {
