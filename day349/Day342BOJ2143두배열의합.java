@@ -27,9 +27,9 @@ public class Day342BOJ2143두배열의합 {
 
         HashMap<Integer, Integer> mapA = new HashMap<>();
 
-        for (int i = 0, j = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             int sum = 0;
-            for (int k = i; k < n; k++, j++) {
+            for (int k = i; k < n; k++) {
                 sum += a[k];
                 Integer vlu = mapA.get(sum);
                 if (vlu == null)
@@ -41,9 +41,9 @@ public class Day342BOJ2143두배열의합 {
 
         long answer = 0;
 
-        for (int i = 0, j = 0; i < m; i++) {
+        for (int i = 0; i < m; i++) {
             int sum = 0;
-            for (int k = i; k < m; k++, j++) {
+            for (int k = i; k < m; k++) {
                 sum += b[k];
                 int result = t - sum;
                 Integer vlu = mapA.get(result);
