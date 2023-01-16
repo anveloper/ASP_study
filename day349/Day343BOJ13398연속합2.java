@@ -7,12 +7,12 @@ public class Day343BOJ13398연속합2 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        StringTokenizer stz = new StringTokenizer(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
         int[] arr = new int[N];
         int[][] dp = new int[N][2];
 
         for (int i = 0; i < N; i++)
-            arr[i] = Integer.parseInt(stz.nextToken());
+            arr[i] = Integer.parseInt(st.nextToken());
 
         int max = arr[0];
         dp[0][0] = arr[0];
