@@ -32,15 +32,15 @@ class Day365BOJ2263트리의순회 {
         br.close();
     }
 
-    private static void recur(int inst, int ined, int post, int poed) {
-        if (inst > ined || post > poed)
+    private static void recur(int inSt, int inEd, int poSt, int poEd) {
+        if (inSt > inEd || poSt > poEd)
             return;
-        int r = postOrder[poed];
+        int r = postOrder[poEd];
         sb.append(r + " ");
 
         int inRoot = getRootIdx[r];
-        int l = inRoot - inst;
-        recur(inst, inRoot - 1, post, post + l - 1);
-        recur(inRoot + 1, ined, post + l, poed - 1);
+        int l = inRoot - inSt;
+        recur(inSt, inRoot - 1, poSt, poSt + l - 1);
+        recur(inRoot + 1, inEd, poSt + l, poEd - 1);
     }
 }
