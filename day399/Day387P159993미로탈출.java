@@ -2,7 +2,7 @@ package day399;
 
 import java.util.*;
 
-class Solution { // 런타임 에러..?
+class Solution {
   static int N, M, cnt = 0;
   static int[] dr = { -1, 1, 0, 0 }, dc = { 0, 0, -1, 1 };
   static char[][] map;
@@ -13,7 +13,7 @@ class Solution { // 런타임 에러..?
     map = new char[N = maps.length][M = maps[0].length()];
 
     int r1 = 0, c1 = 0, r2 = 0, c2 = 0;
-    for (int i = 0; i < M; i++) {
+    for (int i = 0; i < N; i++) {
       String tmp = maps[i];
       for (int j = 0; j < M; j++) {
         map[i][j] = tmp.charAt(j);
