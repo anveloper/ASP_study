@@ -4,35 +4,35 @@ import java.io.*;
 import java.util.*;
 
 public class Day387BOJ3273두수의합 {
+  static int N;
+  static int[] arr;
+
   public static void main(String args[]) throws Exception {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     StringTokenizer st = new StringTokenizer(br.readLine());
 
-    int n = Integer.valueOf(st.nextToken());
+    N = Integer.valueOf(st.nextToken());
     st = new StringTokenizer(br.readLine());
-    int[] arr = new int[n];
-    for (int i = 0; i < n; i++)
+    arr = new int[N];
+    for (int i = 0; i < N; i++)
       arr[i] = Integer.valueOf(st.nextToken());
 
     Arrays.parallelSort(arr);
 
     int x = Integer.valueOf(br.readLine());
-    int count = 0;
-    int start = 0;
-    int end = n - 1;
-    int sum = 0;
+    int l = 0, r = N - 1, cnt = 0, sum = 0;
 
-    while (start < end) {
-      sum = arr[start] + arr[end];
+    while (l < r) {
+      sum = arr[l] + arr[r];
       if (sum == x)
-        count++;
+        cnt++;
 
       if (sum <= x)
-        start++;
+        l++;
       else
-        end--;
+        r--;
     }
-    System.out.println(count);
+    System.out.println(cnt);
     br.close();
   }
 }
