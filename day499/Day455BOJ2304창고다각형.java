@@ -10,33 +10,33 @@ public class Day455BOJ2304창고다각형 {
 
     int[] roof = new int[1001];
     int N = Integer.parseInt(br.readLine());
-    int maxIndex = 0;
-    int maxHeight = 0;
+    int idx = 0;
+    int max = 0;
     for (int i = 0; i < N; i++) {
       st = new StringTokenizer(br.readLine());
-      int index = Integer.parseInt(st.nextToken());
-      int height = Integer.parseInt(st.nextToken());
-      if (maxHeight < height) {
-        maxHeight = height;
-        maxIndex = index;
+      int l = Integer.parseInt(st.nextToken());
+      int h = Integer.parseInt(st.nextToken());
+      if (max < h) {
+        max = h;
+        idx = l;
       }
-      roof[index] = height;
+      roof[l] = h;
     }
 
-    int answer = maxHeight;
-    int moveMax = 0;
-    for (int i = 0; i < maxIndex; i++) {
-      if (moveMax < roof[i])
-        moveMax = roof[i];
-      answer += moveMax;
+    int ans = max;
+    int cur = 0;
+    for (int i = 0; i < idx; i++) {
+      if (cur < roof[i])
+        cur = roof[i];
+      ans += cur;
     }
 
-    moveMax = 0;
-    for (int i = 1000; i > maxIndex; i--) {
-      if (moveMax < roof[i])
-        moveMax = roof[i];
-      answer += moveMax;
+    cur = 0;
+    for (int i = 1000; i > idx; i--) {
+      if (cur < roof[i])
+        cur = roof[i];
+      ans += cur;
     }
-    System.out.println(answer);
+    System.out.println(ans);
   }
 }
