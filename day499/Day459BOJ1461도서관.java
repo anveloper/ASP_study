@@ -20,15 +20,13 @@ public class Day459BOJ1461도서관 {
     for (int i = 0; i < N; i++) {
       int num = Integer.parseInt(st.nextToken());
 
-      if (max < Math.abs(num)) {
+      if (max < Math.abs(num))
         max = Math.abs(num);
-      }
 
-      if (num > 0) {
+      if (num > 0)
         plus.add(num);
-      } else {
+      else
         minus.add(Math.abs(num));
-      }
 
     }
 
