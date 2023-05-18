@@ -26,5 +26,6 @@ public class Day467BOJ1476날짜계산 {
       if (m == 20)
         m = 1;
     }
+    sc.close();
   }
 }
