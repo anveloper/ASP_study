@@ -3,7 +3,7 @@ package day599;
 import java.io.*;
 import java.util.*;
 
-public class Day561BOJ5427붋 {
+public class Day561BOJ5427불 {
   static int w, h;
   static char[][] map;
   static Queue<int[]> person;
