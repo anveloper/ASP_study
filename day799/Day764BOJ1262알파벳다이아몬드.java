@@ -1,6 +1,6 @@
 package day799;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Day764BOJ1262알파벳다이아몬드 {
   public static void main(String[] args) {
